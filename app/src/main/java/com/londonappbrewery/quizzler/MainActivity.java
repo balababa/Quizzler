@@ -64,16 +64,13 @@ public class MainActivity extends Activity {
 
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
-
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         mScoreTextView = (TextView) findViewById(R.id.score);
-
         mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 
         mQuestion = mQuestionBank[mIndex].getQuestionID();
-
-
         mQuestionTextView.setText(mQuestion);
+        mScoreTextView.setText("Score: " + mScore + " / " + mQuestionBank.length);
 
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
